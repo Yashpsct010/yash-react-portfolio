@@ -5,7 +5,7 @@ export const Contact = () => {
 <div className='contact' id="contact">
   <h3>CONTACT</h3>
         <div className="contact__container">
-          <form name="contact" action="POST" data-netlify="true" className="contact__form">
+          <form name="contact" action="POST" netlify netlify-honeypot="bot-field" hidden className="contact__form">
             <input type="text" name="name" placeholder="Name" className="contact__input" />
             <input type="email" name="email" placeholder="Email" className="contact__input" />
             <textarea
@@ -15,6 +15,7 @@ export const Contact = () => {
               placeholder="Contact Details ..."
               className="contact__input"
             ></textarea>
+            <input type="hidden" name="form-name" value="contact" />
             <input
               type="submit"
               value="send"
