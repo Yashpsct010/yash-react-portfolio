@@ -1,14 +1,14 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram,faLinkedin,faGithub } from '@fortawesome/free-brands-svg-icons'
-import bgImg from '../assets/images/bgImg.jpg'
 import yash from '../assets/pdf/Yash-Parmar-Resume.pdf'
 import { faContactBook, faFile } from '@fortawesome/free-regular-svg-icons'
 export const Home = () => {
   return (
     <>
-      <div className="home" id='home' style={{backgroundImage:`url(${bgImg})`,backgroundSize:`cover`, height:"100vh",width:"100%",}}>
-    <p style={{color:"#00000",padding:"20rem 4rem 4rem 3rem",fontSize:"3rem"}}>Code Craftsmanship Unleashed:<br/><br /> Dive into My Portfolio.</p>
+      <div className="home" id='home'>
+    <div className="all">
+    <p>Code Craftsmanship Unleashed:<br/><br /> Dive into My Portfolio.</p>
     <div className='home-link d-flex justify-content-evenly'>
     <a href="#contact">
     <FontAwesomeIcon icon={faContactBook} />
@@ -26,7 +26,11 @@ export const Home = () => {
     <FontAwesomeIcon icon={faGithub} />
     </a>
     </div>
+    </div>
+      <div className="svg">
+      <iframe title="svgicon" src="https://lottie.host/?file=660d98ee-a11c-46ae-bf8e-08a3bc8e56b0/l5CcG5vJrz.json"></iframe>
       </div>
+    </div>
     </>
   )
 }

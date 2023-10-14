@@ -16,10 +16,35 @@ code {
     monospace;
 }
 
-.home{
+.all{
   font-family: 'Segoe UI', cursive;
+  height: 100vh;
+  width:100%;
+  background-color: cornflowerblue;
 }
 
+.all p{
+  color:#000000;
+  padding:20rem 4rem 4rem 3rem;
+  font-size:300%;
+}
+
+.home{
+  display: flex;
+}
+
+.home .svg{
+  display: flex;
+  align-items: center;
+  background-color: cornflowerblue;
+  margin: 0;
+  width: 100%;
+}
+
+.svg iframe{
+  height: 80%;
+  width: 80%;
+}
 
 .navi{
   -webkit-backdrop-filter: blur(8px);
@@ -60,6 +85,7 @@ code {
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* No shadow initially */
   transform: scale(1); /* No scaling initially */
+  color: #000000;
 }
 
 /* Hover effect - add a shadow and scale on hover */
@@ -84,15 +110,9 @@ code {
   font-weight: bolder;
 }
 
-/* #about img{
-  border-radius: 100%;
-  height: 25rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
-
 #about img {
   border-radius: 100%;
-  height: 25rem;
+  max-height: 35vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* No shadow initially */
   transform: scale(1); /* No scaling initially */
@@ -107,7 +127,7 @@ code {
 
 #about p{
   padding: 5vh;
-  font-size: large;
+  font-size: 2vh;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bolder;
   color: black;
@@ -133,8 +153,8 @@ code {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* max-width: 5rem; */
-  width: 50%;
+  max-width:45rem;
+  /* width: 30rem; */
   margin: 0 auto 2rem;
   display: flex;
   justify-content: space-between;
@@ -170,21 +190,27 @@ code {
 }
 
 .work h3{
-  padding: 6vh 6vh 2vh 6vh;
+  padding: 6vh;
   font-family: 'Segoe UI', cursive;
   font-weight: bolder;
+}
+
+.work_type{
+  display: flex;
+  gap: 10px;
+  font-size: 0.9rem;;
 }
 
 /* styles.css */
 
 /* Style the work experience section */
 #work-experience {
-  padding: 0.2rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 50%; /* Limit the width for better readability */
-  margin: 0 auto; /* Center the section on the page */
+  width: 45%;
+  margin: 0 auto;
 }
 
 /* Style individual project entries */
@@ -195,17 +221,18 @@ code {
   border-radius: 10px;
   overflow: hidden;
   transition: box-shadow 0.3s ease; 
+  font-size: inherit;
 }
 
 /* Style project banners */
 .project-banner {
   flex: 1;
   overflow: hidden;
+  height: 14rem;
 }
 
 .project-banner img {
   max-width: 100%;
-  height: 15rem;
   transition: transform 0.3s ease;
   display: flex;
 }
@@ -223,6 +250,7 @@ code {
 .project-details h3{
   text-align: left;
   padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .project-details p {
@@ -261,19 +289,19 @@ code {
 .contact{
   height: 100vh;
   text-align: center;
-  background-color: cornflowerblue;
+  background-color: #6495ed;
+  position: relative;
 }
 
 .contact h3{
-  padding: 6vh;
+  padding: 4.9vh;
+  padding-top: 6vh;
   font-family: 'Segoe UI', cursive;
   font-weight: bolder;
 }
 
 .contact .contact__container{
   width: 50%;
-  display: flex;
-  align-items: center;
   margin: 0 auto;
 }
 
@@ -300,8 +328,7 @@ code {
   bottom: 0;
   right: 0;
   left: 0;
-  margin-top: 22.8vh;
-  /* position: fixed; */
+  position: absolute;
 }
 .footer p{
   margin: 0;
