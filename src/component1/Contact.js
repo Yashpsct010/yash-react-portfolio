@@ -7,8 +7,10 @@ export const Contact = () => {
     emailjs.sendForm('service_smilo4w', 'template_jtl93hd', form.current, 'uKBkPTBJxguHTQcDl')
     .then((result) => {
         console.log(result.text);
+        alert("Message sent Successfully!!");
     }, (error) => {
         console.log(error.text);
+        alert("Some error occured. Please Retry!!");
     });
   }
   return (
